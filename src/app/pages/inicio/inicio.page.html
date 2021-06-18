@@ -1,14 +1,28 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>inicio</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-<ion-button routerLink="/registro-usuario" >página Registro Usuario</ion-button>
+<ion-list>
+  <ion-item
+   *ngFor="let componente of componentes"
+   [routerLink]="componente.direccion"
+  >
+  <ion-icon [name]="componente.icono" slot="start" color="secondary"></ion-icon>
+        {{componente.nombre}}
+
+  </ion-item>
+
+</ion-list>
+  
+</ion-content>
+
+
+  <!-- <ion-button routerLink="/registro-usuario" >página Registro Usuario</ion-button>
 <ion-button routerLink="/registro-egresos">página Registro Egresos</ion-button>
 <ion-button routerLink="/listar-usuario" >página Listar Usuarios</ion-button>
-<ion-button routerLink="/listar-egresos">página Listar Egresos</ion-button>
-
-</ion-content>
+<ion-button routerLink="/listar-egresos">página Listar Egresos</ion-button> -->

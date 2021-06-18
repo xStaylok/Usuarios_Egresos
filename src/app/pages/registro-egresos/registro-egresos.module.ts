@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { ComponentsModule } from '../../components/components.module';
 import { IonicModule } from '@ionic/angular';
 
 import { RegistroEgresosPageRoutingModule } from './registro-egresos-routing.module';
@@ -13,7 +13,8 @@ import { RegistroEgresosPage } from './registro-egresos.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    RegistroEgresosPageRoutingModule
+    RegistroEgresosPageRoutingModule,
+    ComponentsModule,
   ],
   declarations: [RegistroEgresosPage]
 })

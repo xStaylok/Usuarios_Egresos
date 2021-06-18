@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { ComponentsModule } from '../../components/components.module';
 import { IonicModule } from '@ionic/angular';
 
 import { ListarUsuarioPageRoutingModule } from './listar-usuario-routing.module';
@@ -13,7 +13,8 @@ import { ListarUsuarioPage } from './listar-usuario.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ListarUsuarioPageRoutingModule
+    ListarUsuarioPageRoutingModule,
+    ComponentsModule,
   ],
   declarations: [ListarUsuarioPage]
 })
