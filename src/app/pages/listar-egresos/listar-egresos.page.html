@@ -1,5 +1,19 @@
 <app-header titulo="Listar Egresos"></app-header>
 
 <ion-content>
+    <ion-card-content>
+        <ion-card *ngFor="let lista-egresos of lista-egresos">
+            <ion-item>
+                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
+                Descripción: {{lista-egresos.campo1}}
+            </ion-item>
+            <ion-item>
+                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
+                Precio: {{lista-egresos.campo2}}
+            </ion-item>
+        </ion-card>
+
+    </ion-card-content>   
+
 
 </ion-content>

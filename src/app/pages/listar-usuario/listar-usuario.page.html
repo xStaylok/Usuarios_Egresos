@@ -1,5 +1,31 @@
 <app-header titulo="Listar Usuario"></app-header>
 
 <ion-content>
+    <ion-card-content>
+        <ion-card *ngFor="let lista-usuario of lista-usuario">
+            <ion-item>
+                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
+                Nombre: {{lista-usuario.campo1}}
+            </ion-item>
+            <ion-item>
+                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
+                Apellido: {{lista-usuario.campo2}}
+            </ion-item>
+            <ion-item>
+                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
+                Rut: {{lista-usuario.campo3}}
+            </ion-item>
+            <ion-item>
+                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
+                Correo: {{lista-usuario.campo4}}
+            </ion-item>
+            <ion-item>
+                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
+                Password: {{lista-usuario.campo5}}
+            </ion-item>
+        </ion-card>
+
+    </ion-card-content>   
+
 
 </ion-content>
