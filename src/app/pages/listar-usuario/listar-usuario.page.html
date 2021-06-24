@@ -2,26 +2,26 @@
 
 <ion-content>
     <ion-card-content>
-        <ion-card *ngFor="let lista-usuario of lista-usuario">
+        <ion-card *ngFor="let dato_obtenido of datos_obtenidos">
             <ion-item>
-                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
-                Nombre: {{lista-usuario.campo1}}
+                <ion-icon name="body-outline"></ion-icon>
+                Nombre: {{dato_obtenido.campo1}}
             </ion-item>
             <ion-item>
-                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
-                Apellido: {{lista-usuario.campo2}}
+                <ion-icon name="person-circle-outline"></ion-icon>
+                Apellido: {{dato_obtenido.campo2}}
             </ion-item>
             <ion-item>
-                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
-                Rut: {{lista-usuario.campo3}}
+                <ion-icon name="finger-print-outline"></ion-icon>
+                Rut: {{dato_obtenido.campo3}}
             </ion-item>
             <ion-item>
-                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
-                Correo: {{lista-usuario.campo4}}
+                <ion-icon name="mail-unread-outline"></ion-icon>
+                Correo: {{dato_obtenido.campo4}}
             </ion-item>
             <ion-item>
-                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
-                Password: {{lista-usuario.campo5}}
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                Password: {{dato_obtenido.campo5}}
             </ion-item>
         </ion-card>
 

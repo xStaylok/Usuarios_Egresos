@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+//importar servicio
+import { FormularioService } from '../../servicios/formulario.service'
 
 export class EnviarDatos {
   constructor(
-    public dato1,
-    public dato2,
+    public campo1,
+    public campo2,
   ){}
 
 }
@@ -16,7 +18,7 @@ export class EnviarDatos {
 export class RegistroEgresosPage implements OnInit {
 
   datos_formulario;
-  constructor() {
+  constructor(private formularioServicie: FormularioService) {
     this.datos_formulario = new EnviarDatos("Ingrese una breve descripción", "0000000");
    }
 
@@ -24,6 +26,23 @@ export class RegistroEgresosPage implements OnInit {
   }
 
   enviarDatos(){
+      this.formularioServicie.registrarformulario(this.datos_formulario).subscribe(
+
+        (response:any)=>{
+          if(response.registro){
+            alert("Egreso registrado exitosamente");
+          }else{
+            alert("Egreso no registrado")
+          }
+
+        },
+        error => {
+          alert("Error al registrar los egresos")
+        }
+      )
+    
+    
+    
     console.log("Datos del formulario: ", this.datos_formulario)
   }
 }

@@ -40,7 +40,7 @@ export class RegistroUsuarioPage implements OnInit {
       
       },
       error => {
-        alert("error al registrar")
+        alert("Error al registrar")
       }
     )
 

@@ -2,14 +2,14 @@
 
 <ion-content>
     <ion-card-content>
-        <ion-card *ngFor="let lista-egresos of lista-egresos">
+        <ion-card *ngFor="let dato_obtenido of datos_obtenidos">
             <ion-item>
-                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
-                Descripción: {{lista-egresos.campo1}}
+                <ion-icon name="book-outline"></ion-icon>
+                Descripción: {{dato_obtenido.campo1}}
             </ion-item>
             <ion-item>
-                <ion-icon name="arrow-redo-circle-ouline"></ion-icon>
-                Precio: {{lista-egresos.campo2}}
+                <ion-icon name="diamond-outline"></ion-icon>
+                Precio: {{dato_obtenido.campo2}}
             </ion-item>
         </ion-card>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormularioService } from '../../servicios/formulario.service'
 
 @Component({
   selector: 'app-listar-egresos',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listar-egresos.page.scss'],
 })
 export class ListarEgresosPage implements OnInit {
-
-  constructor() { }
+   datos_obtenidos;
+  constructor(private formularioServicie: FormularioService) { }
 
   ngOnInit() {
   }
-
+  ionViewWillEnter(){
+    this.obtenerDatosFormulario();
+ }
+ obtenerDatosFormulario(){
+    this.formularioServicie.obtenerRegistroFormulario().subscribe(
+      (response:any) => {
+         this.datos_obtenidos = response.registros;
+      },
+      error => {
+        alert("Error en la petición")
+      }
+    )
+ }
 }
