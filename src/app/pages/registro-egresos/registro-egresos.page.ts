@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
+export class EnviarDatos {
+  constructor(
+    public dato1,
+    public dato2,
+  ){}
+
+}
+
 @Component({
   selector: 'app-registro-egresos',
   templateUrl: './registro-egresos.page.html',
@@ -7,9 +15,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroEgresosPage implements OnInit {
 
-  constructor() { }
+  datos_formulario;
+  constructor() {
+    this.datos_formulario = new EnviarDatos("Ingrese una breve descripción", "0000000");
+   }
 
   ngOnInit() {
   }
 
+  enviarDatos(){
+    console.log("Datos del formulario: ", this.datos_formulario)
+  }
 }
