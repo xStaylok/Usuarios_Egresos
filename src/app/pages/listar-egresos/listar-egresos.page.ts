@@ -7,18 +7,18 @@ import { FormularioService } from '../../servicios/formulario.service'
   styleUrls: ['./listar-egresos.page.scss'],
 })
 export class ListarEgresosPage implements OnInit {
-   datos_obtenidos;
+   egresos_obtenidos;
   constructor(private formularioServicie: FormularioService) { }
 
   ngOnInit() {
   }
   ionViewWillEnter(){
-    this.obtenerDatosFormulario();
+    this.obtenerEgresoFormulario();
  }
- obtenerDatosFormulario(){
-    this.formularioServicie.obtenerRegistroFormulario().subscribe(
+ obtenerEgresoFormulario(){
+    this.formularioServicie.obtenerEgreso().subscribe(
       (response:any) => {
-         this.datos_obtenidos = response.registros;
+         this.egresos_obtenidos = response.egresos;
       },
       error => {
         alert("Error en la petición")

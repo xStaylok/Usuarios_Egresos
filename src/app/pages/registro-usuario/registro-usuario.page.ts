@@ -4,11 +4,11 @@ import { FormularioService } from '../../servicios/formulario.service'
 
 export class EnviarDatos {
  constructor(
-   public campo1,
-   public campo2,
-   public campo3,
-   public campo4,
-   public campo5,
+   public nombre,
+   public apellido,
+   public rut,
+   public correo,
+   public passsword,
  ){}
 
 }
@@ -22,17 +22,17 @@ export class RegistroUsuarioPage implements OnInit {
 
   datos_formulario;
   constructor(private formularioServicie: FormularioService ) { 
-    this.datos_formulario = new EnviarDatos("Ingrese su nombre", "Ingrese su apellido" , "0", "Ingrese su email", "contraseña");
+    this.datos_formulario = new EnviarDatos("", "" , "00000000-0", "", "");
   }
 
   ngOnInit() {
   }
 
   enviarDatos(){
-    this.formularioServicie.registrarformulario(this.datos_formulario).subscribe(
+    this.formularioServicie.registrarUsuario(this.datos_formulario).subscribe(
 
       (response:any)=>{
-        if(response.registro){
+        if(response.usuario){
           alert("Datos registrados exitosamente");
         }else{
           alert("Datos no registrados")

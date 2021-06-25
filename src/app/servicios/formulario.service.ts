@@ -7,16 +7,29 @@ import { environment } from '../../environments/environment'
 })
 export class FormularioService {
 
-    backend = environment.backend+"/registroForm";
+    backend = environment.backend;
 
   constructor(private http : HttpClient) { }
 
   //funcion para registrar datos de nuestro formulario
-  registrarformulario(datos_formulario){
-    return this.http.post(`${this.backend}/crear-registro`, datos_formulario);
+  registrarUsuario(datos_formulario){
+    return this.http.post(`${this.backend}/usuario/crear-usuario`, datos_formulario);
   }
 
-  obtenerRegistroFormulario(){
-    return this.http.get(`${this.backend}/obtener-registros`);
+  registrarEgreso(datos_egreso){
+    return this.http.post(`${this.backend}/egreso/crear-egreso`, datos_egreso);
+  }
+
+
+  obtenerUsuario(){
+    return this.http.get(`${this.backend}/usuario/obtener-usuarios`);
+  }
+
+  obtenerEgreso(){
+    return this.http.get(`${this.backend}/egreso/obtener-egresos`);
+  }
+
+  obtenerEgresoporUsuario(){
+  return this.http.get(`${this.backend}/egreso/obtener-egresos-usuario/:id`);
   }
 }

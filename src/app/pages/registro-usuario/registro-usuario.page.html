@@ -12,27 +12,27 @@
             <ion-item>
                 <ion-icon name="person-add-outline"></ion-icon>
                 <ion-label position="floating">Nombre</ion-label>
-                <ion-input type="text" name="campo1" [(ngModel)]="datos_formulario.campo1"></ion-input>
+                <ion-input type="text" name="nombre" [(ngModel)]="datos_formulario.nombre"></ion-input>
             </ion-item>
         
             <ion-item>
                 <ion-label position="floating">Apellido</ion-label>
-                <ion-input type="text" name="campo2" [(ngModel)]="datos_formulario.campo2"></ion-input>
+                <ion-input type="text" name="apellido" [(ngModel)]="datos_formulario.apellido"></ion-input>
             </ion-item>
         
             <ion-item>
                 <ion-label position="floating">Rut</ion-label>
-                <ion-input type="text" name="campo3" [(ngModel)]="datos_formulario.campo3"></ion-input>
+                <ion-input type="text" name="rut" [(ngModel)]="datos_formulario.rut"></ion-input>
             </ion-item>
         
             <ion-item>
                 <ion-label position="floating">Correo</ion-label>
-                <ion-input type="text" name="campo4" [(ngModel)]="datos_formulario.campo4"></ion-input>
+                <ion-input type="text" name="correo" [(ngModel)]="datos_formulario.correo"></ion-input>
             </ion-item>
         
             <ion-item>
                 <ion-label position="floating">Password</ion-label>
-                <ion-input type="password" name="campo5" [(ngModel)]="datos_formulario.campo5"></ion-input>
+                <ion-input type="password" name="password" [(ngModel)]="datos_formulario.password"></ion-input>
             </ion-item>
 
             <ion-button (click)="enviarDatos()" expand="full">Registrar</ion-button>

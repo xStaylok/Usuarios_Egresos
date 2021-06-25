@@ -17,9 +17,9 @@ export class ListarUsuarioPage implements OnInit {
       this.obtenerDatosFormulario();
    }
    obtenerDatosFormulario(){
-      this.formularioServicie.obtenerRegistroFormulario().subscribe(
+      this.formularioServicie.obtenerUsuario().subscribe(
         (response:any) => {
-           this.datos_obtenidos = response.registros;
+           this.datos_obtenidos = response.usuarios;
         },
         error => {
           alert("Error en la petición")
